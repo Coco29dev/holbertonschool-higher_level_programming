@@ -10,4 +10,4 @@ def uppercase(str):
         else:
             # Si déjà une majuscule ou un autre caractère afficher tel quel
             result += c
-    print(result)
+    print("{}".format(result))
