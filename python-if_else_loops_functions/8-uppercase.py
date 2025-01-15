@@ -4,7 +4,7 @@ def uppercase(str):
     # Si le caractère est une lettre minuscule, convertir en majuscule
     result = ""
     for c in str:
-        if ord('a') <= ord(c) <= ord('z'):
+        if 97 <= ord(c) <= 122:
             # Convertir la minuscule en majuscule avec - 32 à son code ASCII
             result += chr(ord(c) - 32)
         else:
