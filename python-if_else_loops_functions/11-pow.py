@@ -9,12 +9,12 @@ def pow(a, b):
     # Si b est positif, on fait une boucle
     # pour multiplier a par lui-même b fois
     if b > 0:
-        for _ in range(b):
+        for _ in range(b):  # Répéter l'action b fois
             resultat *= a
 
     # Si b est négatif, on calcule a^(-b) puis on retourne l'inverse
     else:
-        for _ in range(-b):
+        for _ in range(-b):  # Répéter l'action -b fois
             resultat *= a
         resultat = 1 / resultat
         # Retourner l'inverse de a^(-b)
