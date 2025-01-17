@@ -8,5 +8,5 @@ if __name__ == "__main__":
     resultat = add(a, b)
     # On appelle la fonction 'add' en passant 'a' et 'b' en arguments 
     # et on stocke le résultat dans 'resultat'.
-    print("{} + {} = {}".format())
+    print("{} + {} = {}".format(a, b, resultat))
     # On affiche le résultat de l'addition dans le format "1 + 2 = 3".
