@@ -1,6 +1,6 @@
 def print_list_integer(my_list=[]):
-    print("{}".format(1))
-    print("{}".format(2))
-    print("{}".format(3))
-    print("{}".format(4))
-    print("{}".format(5))
+    print("{}".format(my_list[0]))
+    print("{}".format(my_list[1]))
+    print("{}".format(my_list[2]))
+    print("{}".format(my_list[3]))
+    print("{}".format(my_list[4]))
