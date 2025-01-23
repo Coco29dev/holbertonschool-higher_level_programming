@@ -20,7 +20,7 @@ def roman_to_int(roman_string):
         elif char == 'D':
             valeur = 500
         elif char == 'M':
-        	valeur = 1000
+            valeur = 1000
         else:
             return 0
 
