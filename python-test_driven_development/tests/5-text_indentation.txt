@@ -13,3 +13,10 @@ Comment ça va?
 <BLANKLINE>
 >>> text_indentation("Bonjour Comment ça va")
 Bonjour Comment ça va
+>>> text_indentation("Bonjour. Comment ça va? Je fais des tests:")
+Bonjour.
+<BLANKLINE>
+Comment ça va?
+<BLANKLINE>
+Je fais des tests:
+<BLANKLINE>
