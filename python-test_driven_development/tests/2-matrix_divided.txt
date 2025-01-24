@@ -1,4 +1,6 @@
->>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+>>> from importlib import import_module
+>>> import math
+>>> matrix_divided = import_module('2-matrix_divided').matrix_divided
 >>> matrix = [[2, 6, 9], [2, 6, 9], [1, 2, 3]]
 >>> matrix_divided(matrix, 4)
 [[0.5, 1.5, 2.25], [0.5, 1.5, 2.25], [0.25, 0.5, 0.75]]

@@ -65,7 +65,7 @@ def matrix_divided(matrix, div):
         >>> matrix
         [[1, 2, 3], [4, 5, 6]]
     """
-      # verification div est un nombre
+
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
 
@@ -81,17 +81,17 @@ def matrix_divided(matrix, div):
                                 "be a matrix (list of lists)"
                                 " of integers/floats")
 
-    # verification que chaque ligne de la matrice a la même taille
+
     row_size = len(matrix[0])
     for row in matrix:
         if len(row) != row_size:
             raise TypeError("Each row of the matrix must have the same size")
 
-    # Verification div pas égal à 0
+
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    # division de chaque élément de la matrice
+
     new_matrix = []
     for row in matrix:
         new_row = [round(element / div, 2) for element in row]
