@@ -57,8 +57,8 @@ def add_integer(a, b=98):
         >>> add_integer(4, "School")
         TypeError: b must be an integer
     """
-    if not isinstance(a, (int, float)):
+    if not isinstance(a, (int, float)) or a == "nan":
         raise TypeError("a must be an integer")
-    if not isinstance(b, (int, float)):
+    if not isinstance(b, (int, float)) or b == "nan":
         raise TypeError("b must be an integer")
     return int(a) + int(b)
