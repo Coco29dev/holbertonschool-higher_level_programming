@@ -1,6 +1,6 @@
-#!/usr/bin/python3
 import unittest
 max_integer = __import__('6-max_integer').max_integer
+
 
 class TestMaxInteger(unittest.TestCase):
     """Unittests for the max_integer function"""
@@ -43,7 +43,7 @@ class TestMaxInteger(unittest.TestCase):
 
     def test_string_values(self):
         """Test with a list of strings"""
-        self.assertEqual(max_integer(["Jus", "Eau", "Café", "Sirop"]), "Jus")
+        self.assertEqual(max_integer(["Jus", "Eau", "Café", "Sirop"]), "Sirop")
 
     def test_mixed_strings_and_numbers(self):
         """Test with mixed strings and numbers (unsupported type)"""
