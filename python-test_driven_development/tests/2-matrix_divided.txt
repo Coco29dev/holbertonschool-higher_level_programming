@@ -10,11 +10,11 @@ Traceback (most recent call last):
     ...
 ZeroDivisionError: division by zero
 >>> matrix = [[4, 5, 9], [4, 5 ,9], [4, 3, 4]]
->>> matrix_divided(matrix, "oui c'est cool")
+>>> matrix_divided(matrix, "non")
 Traceback (most recent call last):
     ...
 TypeError: div must be a number
->>> matrix = [[4, "oui", 9], [4, 5 ,9], [4, 3, 4]]
+>>> matrix = [[4, "non", 9], [4, 5 ,9], [4, 3, 4]]
 >>> matrix_divided(matrix, 3)
 Traceback (most recent call last):
     ...
