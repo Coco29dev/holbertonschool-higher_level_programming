@@ -5,10 +5,10 @@ Traceback (most recent call last):
 TypeError: text must be a string
 >>> text_indentation("")
 >>> 
->>> text_indentation("Bonjour. \n\nComment ça va?")
+>>> text_indentation("Bonjour.Comment ça va?")
 Bonjour.
-
-
-
+<BLANKLINE>
 Comment ça va?
-
+<BLANKLINE>
+>>> text_indentation("Bonjour Comment ça va")
+Bonjour Comment ça va
