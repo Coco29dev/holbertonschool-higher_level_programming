@@ -81,16 +81,13 @@ def matrix_divided(matrix, div):
                                 "be a matrix (list of lists)"
                                 " of integers/floats")
 
-
     row_size = len(matrix[0])
     for row in matrix:
         if len(row) != row_size:
             raise TypeError("Each row of the matrix must have the same size")
 
-
     if div == 0:
         raise ZeroDivisionError("division by zero")
-
 
     new_matrix = []
     for row in matrix:
