@@ -65,29 +65,35 @@ def matrix_divided(matrix, div):
         >>> matrix
         [[1, 2, 3], [4, 5, 6]]
     """
-    if not isinstance(matrix, list) or not all(isinstance(row, list)
-                                               for row in matrix):
-        raise TypeError("matrix must be a matrix (list of lists) "
-                        "of integers/floats")
-
-    # Vérification que chaque ligne de la matrice a la même taille
-    row_length = len(matrix[0])
-    if not all(len(row) == row_length for row in matrix):
-        raise TypeError("Each row of the matrix must have the same size")
-
-    # Vérification que chaque élément la matrice est un entier ou un flottant
-    for row in matrix:
-        if not all(isinstance(elem, (int, float)) for elem in row):
-            raise TypeError("matrix must be a matrix (list of lists) "
-                            "of integers/floats")
-
-    # Vérification que le diviseur est un nombre (int ou float)
+      # verification div est un nombre
     if not isinstance(div, (int, float)):
         raise TypeError("div must be a number")
 
-    # Vérification que le diviseur n'est pas égal à zéro
+    if not isinstance(matrix, list):
+        raise TypeError("matrix must "
+                        "be a matrix (list of lists) of integers/floats")
+    for row in matrix:
+        if not isinstance(row, list):
+            raise TypeError("Each row of the matrix must have the same size")
+        for element in row:
+            if not isinstance(element, (int, float)):
+                raise TypeError("matrix must "
+                                "be a matrix (list of lists)"
+                                " of integers/floats")
+
+    # verification que chaque ligne de la matrice a la même taille
+    row_size = len(matrix[0])
+    for row in matrix:
+        if len(row) != row_size:
+            raise TypeError("Each row of the matrix must have the same size")
+
+    # Verification div pas égal à 0
     if div == 0:
         raise ZeroDivisionError("division by zero")
 
-    # Diviser chaque élément de la matrice et arrondir à 2 décimales
-    return [[round(elem / div, 2) for elem in row] for row in matrix]
+    # division de chaque élément de la matrice
+    new_matrix = []
+    for row in matrix:
+        new_row = [round(element / div, 2) for element in row]
+        new_matrix.append(new_row)
+    return new_matrix
