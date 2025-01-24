@@ -4,6 +4,9 @@ max_integer = __import__('6-max_integer').max_integer
 
 class TestMaxInteger(unittest.TestCase):
     """Unittests for the max_integer function"""
+    def test_max_at_the_beginning(self):
+        """Test with the maximum value at the beginning of the list"""
+        self.assertEqual(max_integer([100, 50, 30, 20, 10]), 100)
 
     def test_positive_integers(self):
         """Test with a list of positive integers"""
