@@ -92,7 +92,7 @@ class Square:
         Raises:
             TypeError: Si la position ne contient pas 2 entiers positifs.
         """
-        if value < 0:
+        if  not isinstance(value, tuple) or len(value) != 2:
             raise TypeError("Position must be a tuple of 2 positive integers")
         self.__position = value
 
