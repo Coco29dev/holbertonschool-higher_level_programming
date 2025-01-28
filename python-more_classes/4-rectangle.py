@@ -166,7 +166,6 @@ class Rectangle:
                 rectangle_str += "\n"
         return rectangle_str
 
-
     def __repr__(self):
         """
         Retourne une chaîne de caractères représentant l'objet Rectangle.
