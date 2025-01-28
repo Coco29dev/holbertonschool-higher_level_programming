@@ -157,11 +157,11 @@ class Rectangle:
         str : Une chaîne représentant le rectangle, ou une chaîne vide si l'une
         des dimensions est égale à zéro.
         """
-        if self.__width == 0 or self.__height == 0:
-            return ""
-
         rectangle_str = ""
-
-        for _ in range(0, self.__height):
-            rectangle_str += "#" * self.__width + "\n"
+        if self.__width == 0 or self.__height == 0:
+            return rectangle_str
+        for i in range(self.__height):
+            rectangle_str += ("#" * self.__width)
+            if i is not self.__height - 1:
+                rectangle_str += "\n"
         return rectangle_str
