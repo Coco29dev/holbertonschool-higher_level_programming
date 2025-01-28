@@ -46,8 +46,8 @@ class Rectangle:
             height (int) : La hauteur du rectangle. Doit être un entier
             positif ou égal à zéro.
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
 
     @property
     def width(self):
