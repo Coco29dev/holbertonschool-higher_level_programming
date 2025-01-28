@@ -144,6 +144,19 @@ class Rectangle:
         return (self.__width + self.__height) * 2
 
     def __str__(self):
+        """
+        Retourne une représentation visuelle du rectangle sous forme de chaîne.
+
+        Cette méthode crée un rectangle en utilisant
+        le caractère '#' pour représenter
+        les lignes et les colonnes du rectangle.
+        Si la largeur ou la hauteur est égale à zéro,
+        une chaîne vide est retournée.
+
+        Retourne :
+        str : Une chaîne représentant le rectangle, ou une chaîne vide si l'une
+        des dimensions est égale à zéro.
+        """
         if self.__width == 0 or self.__height == 0:
             return ""
 
