@@ -113,9 +113,10 @@ class Square:
 
         Si la taille du carré est 0, rien n'est affiché.
         """
-        for _ in range(self.__position[1]):
-            print()
         if self.__size == 0:
+            print()
+            return
+        for _ in range(self.__position[1]):
             print()
         else:
             for _ in range(self.size):
