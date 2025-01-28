@@ -39,8 +39,8 @@ class Square:
             size (int): La taille du carré (doit être un entier >= 0).
             position (tuple): La position du carré sous forme de tuple (x, y).
         """
-        self.__size = size
-        self.__position = position
+        self.size = size
+        self.position = position
 
     @property
     def size(self):
