@@ -32,4 +32,4 @@ def inherits_from(obj, a_class):
         bool: Retourne True si l'objet est une instance d'une classe
         qui hérite de `a_class`, sinon retourne False.
     """
-    return type(obj) is not a_class
+    return isinstance(obj, a_class) and type(obj) is not a_class
