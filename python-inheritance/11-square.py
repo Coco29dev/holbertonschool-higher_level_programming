@@ -44,4 +44,11 @@ class Square(Rectangle):
         return self.__size * self.__size
 
     def __str__(self):
+        """"
+        Retourne une représentation sous forme de chaîne de caractères du carré
+
+    Retourne :
+        str : La chaîne de caractères représentant le carré sous la forme
+              "[Carré] côtér/côté".
+    """
         return f"[Square] {self.__size}/{self.__size}"
