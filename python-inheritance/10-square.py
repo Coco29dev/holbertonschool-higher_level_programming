@@ -7,7 +7,6 @@ Square est utilisée pour représenter un carré et valider que sa taille est un
 entier positif.
 """
 
-BaseGeometry = __import__('7-base_geometry').BaseGeometry
 Rectangle = __import__('9-rectangle').Rectangle
 
 
