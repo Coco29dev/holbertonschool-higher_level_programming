@@ -30,25 +30,25 @@ class Square(Rectangle):
     le constructeur de la classe parente (Rectangle) en passant la taille
     pour la largeur et la hauteur.
     """
+        self.integer_validator("size", size)
         self.__size = size
         super().__init__(size, size)
-        self.integer_validator("size", size)
 
     def area(self):
         """
-    Calcule l'aire du carré.
+        Calcule l'aire du carré.
 
-    Retourne :
+        Retourne :
         int : L'aire du carré (taille * taille).
-    """
+        """
         return self.__size * self.__size
 
     def __str__(self):
         """"
         Retourne une représentation sous forme de chaîne de caractères du carré
 
-    Retourne :
+        Retourne :
         str : La chaîne de caractères représentant le carré sous la forme
               "[Carré] côtér/côté".
-    """
+        """
         return f"[Square] {self.__size}/{self.__size}"
