@@ -15,7 +15,7 @@ class Shape(ABC):
 
 class Circle(Shape):
     def __init__(self, radius):
-        self.radius = radius
+        self.radius = abs(radius)
 
     def area(self):
         return pi * (self.radius * self.radius)
