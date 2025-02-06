@@ -32,3 +32,6 @@ Traceback (most recent call last):
     ...
 ValueError: -8 must be greater than 0
 >>> bg.integer_validator(BaseGeometry, 18)
+>>> bg.integer_validator(BaseGeometry, int)
+    ...
+TypeError: <class '7-base_geometry.BaseGeometry'> must be an integer
