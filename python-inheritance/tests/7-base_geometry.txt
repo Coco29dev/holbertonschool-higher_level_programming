@@ -18,3 +18,4 @@ ValueError: distance must be greater than 0
 Traceback (most recent call last):
     ...
 TypeError: age must be an integer
+>>> bg.integer_validator(13, 8)
