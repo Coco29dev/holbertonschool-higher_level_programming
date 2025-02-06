@@ -31,7 +31,4 @@ TypeError: -8 must be an integer
 Traceback (most recent call last):
     ...
 ValueError: -8 must be greater than 0
->>> bg.integer_validator(bonjour)
-Traceback (most recent call last):
-    ...
-NameError: name 'bonjour' is not defined
+>>> bg.integer_validator(BaseGeometry, 18)
