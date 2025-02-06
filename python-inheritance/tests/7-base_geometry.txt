@@ -23,3 +23,11 @@ TypeError: age must be an integer
 Traceback (most recent call last):
     ...
 TypeError: 13 must be an integer
+>>> bg.integer_validator(-8, "test")
+Traceback (most recent call last):
+    ...
+TypeError: -8 must be an integer
+>>> bg.integer_validator(-8, -4)
+Traceback (most recent call last):
+    ...
+ValueError: -8 must be greater than 0
