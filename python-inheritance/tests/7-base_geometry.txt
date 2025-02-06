@@ -56,3 +56,4 @@ TypeError: number must be an integer
 Traceback (most recent call last):
     ...
 TypeError: number must be an integer
+>>> bg.integer_validator("size", 1000000000)
