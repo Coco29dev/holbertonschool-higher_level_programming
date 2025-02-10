@@ -18,4 +18,4 @@ def from_json_string(my_str):
         any: L'objet Python obtenu après conversion.
     """
     my_str = json.loads(my_str)
-    print(my_str)
+    return my_str
