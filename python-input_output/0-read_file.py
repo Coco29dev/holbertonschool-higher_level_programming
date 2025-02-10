@@ -17,6 +17,6 @@ def read_file(filename=""):
         - Utilise l'instruction 'with' pour gérer les opérations sur le fichier
         - Supposé que le fichier existe et est lisible.
     """
-    with open("my_file_0.txt", "r") as f:
-        filename = f.read()
-        print(filename)
+    with open(filename, "r") as f:
+        contenu = f.read()
+        print(contenu)
