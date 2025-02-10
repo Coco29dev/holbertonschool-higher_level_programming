@@ -18,5 +18,5 @@ def read_file(filename=""):
         - Supposé que le fichier existe et est lisible.
     """
     with open("my_file_0.txt", "r") as f:
-        contenu = f.read()
-        print(contenu, end="")
+        filename = f.read()
+        print(filename)
