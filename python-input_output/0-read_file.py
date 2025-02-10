@@ -18,5 +18,4 @@ def read_file(filename=""):
         - Supposé que le fichier existe et est lisible.
     """
     with open(filename, "r", encoding="utf-8") as f:
-        contenu = f.read()
-        print(contenu)
+        print(f.read(), end="")
