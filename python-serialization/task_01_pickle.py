@@ -7,7 +7,7 @@ de sérialiser et désérialiser des objets personnalisés
 en utilisant le module pickle.
 """
 
-import pickle
+# import pickle
 
 
 class CustomObject:
@@ -84,10 +84,12 @@ class CustomObject:
             None
         """
         try:
+            import pickle
             with open(filename, "wb") as f:
                 pickle.dump(self, f)
-        except Exception:
-            print(f"Il y a une erreur lors de la sérialisation")
+            return True
+        except (pickle.PickleError, IOError, Exception) as e:
+            return False
 
     @classmethod
     def deserialize(cls, filename):
@@ -101,8 +103,9 @@ class CustomObject:
             CustomObject: Une instance de CustomObject ou None en cas d'erreur.
         """
         try:
+            import pickle
             with open(filename, "rb") as f:
                 return pickle.load(f)
-        except (FileNotFoundError, pickle.PickleError):
-            print(f"Il y a une erreur lors de la désérialisation")
+        except (FileNotFoundError, pickle.PicklingError,
+                Exception, IOError) as e:
             return None
