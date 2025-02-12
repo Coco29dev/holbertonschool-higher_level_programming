@@ -29,10 +29,12 @@ class CustomObject:
 
     @property
     def name(self):
+        """Retourne le nom de la personne."""
         return self._name
 
     @name.setter
     def name(self, name):
+        """Définit le nom de la personne."""
         if not isinstance(name, str):
             raise TypeError("Name doit être un str")
         if name is None or name.strip() == "":
@@ -41,10 +43,12 @@ class CustomObject:
 
     @property
     def age(self):
+        """Retourne l'âge de la personne."""
         return self._age
 
     @age.setter
     def age(self, age):
+        """Définit l'âge de la personne."""
         if not isinstance(age, int):
             raise TypeError("Age doit être un int")
         if age < 0:
@@ -53,10 +57,12 @@ class CustomObject:
 
     @property
     def is_student(self):
+        """Retourne le statut d'étudiant de la personne."""
         return self._is_student
 
     @is_student.setter
     def is_student(self, is_student):
+        """Définit le statut d'étudiant de la personne"""
         if not isinstance(is_student, bool):
             raise TypeError("is_student doit être un boolean")
         self._is_student = is_student
@@ -85,7 +91,7 @@ class CustomObject:
             return None
 
     @classmethod
-    def deserialize(cls, filename: str):
+    def deserialize(cls, filename):
         """Désérialise un objet à partir d'un fichier et le retourne.
 
         Args:
