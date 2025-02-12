@@ -88,7 +88,6 @@ class CustomObject:
                 pickle.dump(self, f)
         except Exception:
             print(f"Il y a une erreur lors de la sérialisation")
-            return None
 
     @classmethod
     def deserialize(cls, filename):
