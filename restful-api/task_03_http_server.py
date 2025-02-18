@@ -40,7 +40,12 @@ class SimpleAPIHandler(BaseHTTPRequestHandler):
             self.wfile.write(json.dumps(error_message).encode('utf-8'))
 
 
-server_address = ('', 8000)
-httpd = HTTPServer(server_address, SimpleAPIHandler)
-print("Serveur démarré sur http://localhost:8000")
-httpd.serve_forever()
+def run():
+    server_address = ('', 8000)
+    httpd = HTTPServer(server_address, SimpleAPIHandler)
+    print("Serveur démarré sur http://localhost:8000")
+    httpd.serve_forever()
+
+
+if __name__ == '__main__':
+    run()
