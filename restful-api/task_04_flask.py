@@ -35,16 +35,21 @@ def get_usr(username):
 
 
 @app.route('/add_user', methods=['POST'])
-def add_usr():
+def add_user():
     new_user = request.get_json()
     if 'username' not in new_user:
-        return jsonify({"error": "Nom d'utilisateur requis"}), 404
+        return jsonify({"error": "Nom d'utilisateur requis"}), 400
     username = new_user['username']
-    users[username] = {"username": new_user.get('username'),
-                       "name": new_user.get(
-        'name'), "age": new_user.get('age'), "city": new_user.get('city')}
-    return jsonify({"message":
-                    "Utilisateur ajouté", "user": users[username]}), 201
+    users[username] = {
+        "username": new_user.get('username'),
+        "name": new_user.get('name'),
+        "age": new_user.get('age'),
+        "city": new_user.get('city')
+    }
+    return jsonify({
+        "message": "Utilisateur ajouté",
+        "user": users[username]
+    }), 201
 
 
 if __name__ == "__main__":
