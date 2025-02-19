@@ -4,11 +4,7 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-users = {{
-    "jane": {"username": "jane", "name":
-             "Jane", "age": 28, "city": "Los Angeles"},
-    "john": {"username": "john", "name":
-             "John", "age": 30, "city": "New York"}}}
+users = {}
 
 
 @app.route('/')
@@ -17,7 +13,7 @@ def home():
 
 
 @app.route('/data')
-def user():
+def json_response():
     user = list(users.keys())
     return jsonify(user)
 
@@ -28,11 +24,10 @@ def status():
 
 
 @app.route('/users/<username>')
-def get_usr(username):
+def user_data(username):
     if username not in users:
         return jsonify({"error": "User not found"}), 404
-    else:
-        return jsonify(users[username])
+    return jsonify(users[username])
 
 
 @app.route('/add_user', methods=['POST'])
