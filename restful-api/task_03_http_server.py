@@ -6,6 +6,10 @@ import json
 
 class SimpleAPIHandler(BaseHTTPRequestHandler):
     def do_GET(self):
+        if self.path == '/favicon.ico':
+            self.send_response(204)
+            self.end_headers()
+            return
         if self.path == "/":
             self.send_response(200)
             self.send_header('Content-type', 'text/html')
