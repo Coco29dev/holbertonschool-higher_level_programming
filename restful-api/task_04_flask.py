@@ -48,7 +48,7 @@ def add_user():
         "city": new_user.get('city')
     }
     return jsonify({
-        "message": "Utilisateur ajouté",
+        "message": "User added",
         "user": users[username]
     }), 201
 
