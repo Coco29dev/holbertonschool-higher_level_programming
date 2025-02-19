@@ -26,7 +26,7 @@ def status():
 @app.route('/users/<username>')
 def get_usr(username):
     if username not in users:
-        return jsonify({"error": "Utilisateur non trouvé"}), 404
+        return jsonify({"error": "User not found"}), 404
     else:
         return jsonify(users[username])
 
@@ -35,7 +35,7 @@ def get_usr(username):
 def add_user():
     new_user = request.get_json()
     if 'username' not in new_user:
-        return jsonify({"error": "Nom d'utilisateur requis"}), 400
+        return jsonify({"error": "Username is required"}), 400
     username = new_user['username']
     users[username] = {
         "username": new_user.get('username'),
