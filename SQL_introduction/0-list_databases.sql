@@ -1,3 +1,3 @@
--- yes
--- yes
+-- show
+-- list database
 SHOW DATABASES;

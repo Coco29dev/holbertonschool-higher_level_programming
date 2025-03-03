@@ -1,3 +1,3 @@
--- yes
--- yes
+-- show
+-- tables
 SHOW TABLES
