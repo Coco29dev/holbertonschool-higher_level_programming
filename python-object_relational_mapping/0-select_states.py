@@ -18,13 +18,12 @@ if __name__ == "__main__":
     password = sys.argv[2]
     database = sys.argv[3]
 
-
     mydb = MySQLdb.connect(
-    host="localhost",
-    user="root",
-    password="root",
-    database="hbtn_0e_0_usa"
-    )
+        host="localhost",
+        user="root",
+        password="root",
+        database="hbtn_0e_0_usa"
+        )
 
     cursor = mydb.cursor()
 
