@@ -20,9 +20,9 @@ if __name__ == "__main__":
 
     mydb = MySQLdb.connect(
         host="localhost",
-        user="root",
-        password="root",
-        database="hbtn_0e_0_usa"
+        user=username,
+        password=password,
+        database=database
         )
 
     cursor = mydb.cursor()
