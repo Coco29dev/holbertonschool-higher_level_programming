@@ -21,10 +21,8 @@ class State(Base):
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
 
-    engine = create_engine("mysql+mysqldb://@localhost/")
-    Base.metadata.create_all(engine)
+engine = create_engine("mysql+mysqldb://@localhost/")
+Base.metadata.create_all(engine)
 
-    Session = sessionmaker(bind=engine)
-    session = Session()
-
-    session.close()
+Session = sessionmaker(bind=engine)
+session = Session()
